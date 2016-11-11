@@ -26,6 +26,9 @@ function calculatorModule(){
    * @return { Number }
    */
 
+   function getTotal(){
+    return total;
+   }
 
 
   /**
@@ -33,6 +36,7 @@ function calculatorModule(){
    * @param { Number } x
    */
 
+   
 
   /**
    * Subtracts the value passed in from `total`
@@ -71,6 +75,7 @@ function calculatorModule(){
    * Validation
    */
   return {
-    load: load
-  }
+    load: load,
+    getTotal: getTotal,
+  };
 }
