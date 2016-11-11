@@ -6,6 +6,9 @@
  * @return {object} `calculator` object that can be used
  */
 
+function calculatorModule(){
+  let memory = 0
+  let total = 0
 
   /**
    * sets the `total` to the number passed in
@@ -13,6 +16,7 @@
    * @return { Number }    current total
    */
 
+  
 
   /**
    * Return the value of `total`
@@ -47,7 +51,7 @@
   /**
    * Return the value stored at `memory`
    * @return { Number }
-   */
+   */ 
 
 
   /**
@@ -62,4 +66,5 @@
   /**
    * Validation
    */
-
+  return {}
+}
