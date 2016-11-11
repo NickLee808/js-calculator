@@ -63,13 +63,16 @@ function calculatorModule(){
    * @param  { Number } x
    */
 
-  
+  function divide(x){
+    return _total /= x;
+   }
 
   /**
    * Return the value stored at `memory`
    * @return { Number }
    */ 
 
+   
 
   /**
    * Stores the value of `total` to `memory`
@@ -89,5 +92,6 @@ function calculatorModule(){
     add: add,
     subtract: subtract,
     multiply: multiply,
+    divide: divide,
   };
 }
