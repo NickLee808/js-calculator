@@ -10,13 +10,24 @@ function calculatorModule(){
   let _memory = 0
   let _total = 0
 
+
+
+  function validations(x){
+    if (typeof x !== 'number'){
+      throw new Error();
+    }
+  }
+
+
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
 
+
   function load(x){
+    validations(x);
     _total = x;
     return _total;
   } 
@@ -37,6 +48,7 @@ function calculatorModule(){
    */
 
   function add(x){
+    validations(x);
     return _total += x;
    }
 
@@ -46,6 +58,7 @@ function calculatorModule(){
    */
 
   function subtract(x){
+    validations(x);
     return _total -= x;
    }
 
@@ -55,6 +68,7 @@ function calculatorModule(){
    */
 
   function multiply(x){
+    validations(x);
     return _total *= x;
    }
 
@@ -64,6 +78,7 @@ function calculatorModule(){
    */
 
   function divide(x){
+    validations(x);
     return _total /= x;
    }
 
@@ -72,7 +87,7 @@ function calculatorModule(){
    * @return { Number }
    */ 
 
-  function recallMemory(){
+  function recallMemory(x){
     return _memory;
   }
 
@@ -80,20 +95,23 @@ function calculatorModule(){
    * Stores the value of `total` to `memory`
    */
 
-  function saveMemory(){
+  function saveMemory(x){
     _memory = _total;
   }
   /**
    * Clear the value stored at `memory`
    */
 
-  function clearMemory(){
+  function clearMemory(x){
     _memory = 0;
   }
 
   /**
    * Validation
    */
+
+
+
   return {
     load: load,
     getTotal: getTotal,
