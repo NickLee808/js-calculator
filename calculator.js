@@ -7,8 +7,8 @@
  */
 
 function calculatorModule(){
-  let _memory = 0
-  let _total = 0
+  var _memory = 0;
+  var _total = 0;
 
 
 
