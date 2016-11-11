@@ -7,8 +7,8 @@
  */
 
 function calculatorModule(){
-  let memory = 0
-  let total = 0
+  let _memory = 0
+  let _total = 0
 
   /**
    * sets the `total` to the number passed in
@@ -17,8 +17,8 @@ function calculatorModule(){
    */
 
   function load(x){
-    total = x;
-    return total;
+    _total = x;
+    return _total;
   } 
 
   /**
@@ -26,8 +26,8 @@ function calculatorModule(){
    * @return { Number }
    */
 
-   function getTotal(){
-    return total;
+  function getTotal(x){
+    return _total;
    }
 
 
@@ -36,13 +36,16 @@ function calculatorModule(){
    * @param { Number } x
    */
 
-   
+  function add(x){
+    return _total += x;
+   }
 
   /**
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
 
+   
 
   /**
    * Multiplies the value by `total`
@@ -77,5 +80,6 @@ function calculatorModule(){
   return {
     load: load,
     getTotal: getTotal,
+    add: add,
   };
 }
