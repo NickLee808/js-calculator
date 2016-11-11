@@ -72,16 +72,17 @@ function calculatorModule(){
    * @return { Number }
    */ 
 
-   function recallMemory(x){
+  function recallMemory(x){
     return _memory;
-   }
+  }
 
   /**
    * Stores the value of `total` to `memory`
    */
 
-  
-
+  function saveMemory(x){
+    _memory = _total;
+  }
   /**
    * Clear the value stored at `memory`
    */
@@ -96,6 +97,7 @@ function calculatorModule(){
     subtract: subtract,
     multiply: multiply,
     divide: divide,
-    recallMemory: recallMemory
+    recallMemory: recallMemory,
+    saveMemory, saveMemory,
   };
 }
